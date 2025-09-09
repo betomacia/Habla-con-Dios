@@ -177,5 +177,6 @@ app.get("/api/heygen/config", (_req, res) => {
 });
 
 // Arranque
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Servidor listo en puerto ${PORT}`));
+const PORT = Number(process.env.PORT || 3000);
+app.listen(PORT, "0.0.0.0", () => console.log(`Servidor listo en puerto ${PORT}`));
+
